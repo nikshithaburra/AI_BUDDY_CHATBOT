@@ -441,7 +441,7 @@
       content: m.text
     }));
 
-    const response = await fetch("api/chat", {
+    const response = await fetch("api/chat.js", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ messages: apiMessages })
@@ -566,7 +566,7 @@
     } catch (err) {
       hideComposing();
       s.messages.push({ role:'bot', text: "That didn't go through on my end. Give it another try in a moment." });
-      console.error("AI Buddy error:", err);
+      
     }
     renderThread();
     autosize();
